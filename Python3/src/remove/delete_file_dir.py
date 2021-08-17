@@ -8,13 +8,13 @@
 """
 
 import os
-#import shutil
+#import shutil # utilities of 'shell'
 if __name__ == '__main__':
     from format_number import format_number_kilo_by_kilo
 else:
     from remove.format_number import format_number_kilo_by_kilo
 
-__version_code = '1.0.0' # version code
+__version_code = '1.0.1' # version code
 
 def version():
     return __version_code
@@ -51,11 +51,11 @@ def delete_by_name_under_path(path_to_search, name_of_file_or_dir_to_delete, pat
     if os.path.exists(obj_path):
         _is_dir = os.path.isdir(obj_path)
         if _is_dir and (pattern // 2 ) % 2 == 1: # target is a folder/directory AND pattern=1x
-            # Recursively delete/remove a specific folder/directory.(method 1)
-            _delete_all_under(obj_path) # First, delete/remove all files under a specific sub-folder.
+            # Recursively delete/remove a specific folder/directory. (method 1)
+            _delete_all_under(obj_path) # First, delete/remove all files and sub-folders under a specific sub-folder.
             os.rmdir(obj_path) # Second, delete/remove the specific folder/directory.
-            # Recursively delete/remove a specific folder/directory.(method 2)
-            #shutil.rmtree(obj_path) # Recursively delete/remove a specific folder/directory.
+            # Recursively delete/remove a specific folder/directory. (method 2)
+            #shutil.rmtree(obj_path) # (shell's utilities).(remove a whole tree of files and folders under a specific path on a file system)
             folder_count += 1
         if (not _is_dir) and pattern % 2 == 1: # target is a file AND pattern=x1
             os.remove(obj_path) # Simply delete/remove a specific file.
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     print("\nThe file 'delete_file_dir.py' is a program unit in module 'remove', and it should not be used in this way.")
     print("\n---\nAPI usage:\n")
     print("from remove import delete_file_dir\n")
-    print("folder_count, file_count = delete_under_path(path_to_search, name_of_file_or_dir_to_delete, pattern)\n")
+    print("folder_count, file_count = delete_by_name_under_path(path_to_search, name_of_file_or_dir_to_delete, pattern)\n")
     print("path_to_search :: str")
     print("name_of_file_or_dir_to_delete :: str")
     print("pattern :: int")
