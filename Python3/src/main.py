@@ -66,7 +66,7 @@ def main():
                 help_info += "or -d test\n"
                 help_info += "\t(to search current working path recursively for all folders named 'test' and delete)\n"
                 help_info += "or -f test.txt ~/Downloads\n"
-                help_info += "\t(to search path '~/Downloads' recursively for all files named 'test' and delete)\n"
+                help_info += "\t(to search path '~/Downloads' recursively for all files named 'test.txt' and delete)\n"
                 help_info += "or -f test.txt\n"
                 help_info += "\t(to search current working path recursively for all files named 'test.txt' and delete)\n"
                 help_info += "or test.txt\n"
@@ -88,11 +88,19 @@ def main():
             print("\nERROR: Too many arguments !\n\nType either '--help' or '-h' for usage info.\n")
             return -3
         
-        _folder_count, _file_count = del_f_d.delete_by_name_under_path(start_path, target_name, pattern)
-        print("\n %s folder(s), %s file(s) were deleted.\n" % (format_num.format_number_kilo_by_kilo(_folder_count), format_num.format_number_kilo_by_kilo(_file_count)))
+        _folder_count = 0
+        _file_count = 0
+        _size_sum = 0
+
+        _folder_count, _file_count, _size_sum = del_f_d.delete_by_name_under_path(start_path, target_name, pattern)
+        
+        _folder_str = format_num.format_number_kilo_by_kilo(_folder_count)
+        _file_str = format_num.format_number_kilo_by_kilo(_file_count)
+        _size_str = format_num.format_number_kilo_by_kilo(_size_sum)
+        print("\n %s folder(s) and %s file(s) matched and were deleted.\n(total size deleted: %s byte(s))\n" % (_folder_str, _file_str, _size_str) )
         return 0
     except Exception as ex:
-        print("Unknown error(s) occurred.")
+        print("\nUnknown error(s) occurred.\n\n%s\n\n" % str(ex))
         return -1
 
 if __name__ == '__main__':
