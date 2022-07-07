@@ -7,15 +7,15 @@ Also, you can set this program as one of your OS commands by a little skill as y
 
 ===========
 
-Usage:
+#Usage:
 
--h or --help:
+#-h or --help
 ‧ For more detailed usage, give the program exactly one argument '-h' or '--help'.
 
---version:
+#--version
 ‧ For version information, give the program exactly one argument '--version'.
 
--d/-f:
+#-d/-f
 ‧ To delete sub-directories/sub-folders with an exactly identical name which you give the program under your current path, you can pass a short option '-d' additionally.
 ‧ To delete files with an exactly identical name which you give the program under your current path, you can pass a short option '-f' additionally; by default, the program would execute this option if you do not specify an option to delete.
 ‧ To delete both files and sub-directories/sub-folders with an exactly identical name which you give the program under your current path, you can pass a short option either '-df' or '-fd' additionally; following traditional usage, short options for this program can be mixed together to work without their order in string.
