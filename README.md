@@ -34,6 +34,6 @@ And for safety and security, this program would and should NEVER take a regular 
 
 Besides, you would NOT correctly delete files or folders which you want to delete with a WRONG option to delete.
 
-This program was available as executables with corresponding SHA-256 hash values for verification across Windows, macOS, and some Linux distros.
+This program is available as executables with corresponding SHA-256 hash values for verification across Windows, macOS, and some Linux distros.
 
 If you want to use it on an OS other than above, you can execute it via a Python3 interpreter on that OS, or you can build an executable from the source code yourself.
