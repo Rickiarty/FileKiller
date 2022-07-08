@@ -6,6 +6,8 @@ For a glinpse and easy understanding, think it as a smart and convenient version
 
 Also, you can set this program as one of your OS commands by a little skill as you like.
 
+[![OSCS Status](https://www.oscs1024.com/platform/badge/Rickiarty/FileKiller.svg?size=small)](https://www.oscs1024.com/project/Rickiarty/FileKiller?ref=badge_small)
+
 ===========
 
 Usage
