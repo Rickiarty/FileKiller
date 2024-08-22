@@ -5,6 +5,8 @@ hash values of ver. 1.1.0 with SHA-256:
         b32b2433388ab3c7191c429d1d60c72690bbaa0cae615c529bcb87e52978d7eb
     macOS: 
         8649a8455da0511d89c78124a2d7575b8a8b000b3b4f65950bfc75098b694c6a
+	RaspberryOS on arm64:
+		ed7fbd3345563dd1729322c1c1470e5104d3df2a42f4026a1e39cafa84eace2a
 
 hash values of ver. 1.0.0 with SHA-256: 
     Debian: 
